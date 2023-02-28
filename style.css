@@ -14,9 +14,12 @@ body {
     list-style: none;
 } */
 .container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin: 20px;
+    justify-content: center;
 }
 .container .color {
     background-color: #fff;
@@ -26,10 +29,41 @@ body {
     text-align: center;
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(52, 87, 220, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.container .color:active {
+    transform: scale(0.95);
 }
 .color .rect-box {
     width: 185px;
     height: 188px;
     background-color: #8A6CFF;
     border-radius: 5px;
+}
+.color:hover .rect-box {
+    filter: brightness(106%);
+}
+.color .hex-value {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin: 12px 0 8px;
+    color: #444;
+}
+.refresh-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    outline: none;
+    font-size: 1.1rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 12px 20px;
+    background-color: #8A6CFF;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(52, 87, 220, 0.02);
+    transform: translate(-50%);
 }
