@@ -1,4 +1,19 @@
+// navbar js start
+const navToggle = document.querySelector('.nav-toggle');
+const links = document.querySelector('.links');
 
+navToggle.addEventListener('click', function () {
+    // console.log(links.classList.contains('random'));
+    // if (links.classList.contains('show-links')) {
+    //     links.classList.remove('show-links')
+    // } else {
+    //     links.classList.add('show-links')
+    // }
+    links.classList.toggle('show-links')
+})
+// navbar js end
+
+// color js start
 const container = document.querySelector(".container")
 const refreshBtn = document.querySelector(".refresh-btn");
 
@@ -34,6 +49,7 @@ const copyColor = (elem, hexVal) => {
         setTimeout(() => {
             colorElement.innerText = hexVal;
         }, 1000);
-    })
+    }).catch(() => alert("'Failed to copy color!'"));
 }
 refreshBtn.addEventListener("click", generatePalette);
+// color js end
