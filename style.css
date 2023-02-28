@@ -1,0 +1,35 @@
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: #E3F2FD;
+}
+/* ul {
+    list-style: none;
+} */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.container .color {
+    background-color: #fff;
+    list-style: none;
+    border-radius: 6px;
+    padding: 7px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(52, 87, 220, 0.08);
+}
+.color .rect-box {
+    width: 185px;
+    height: 188px;
+    background-color: #8A6CFF;
+    border-radius: 5px;
+}
