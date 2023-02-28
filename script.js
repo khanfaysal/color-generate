@@ -16,9 +16,24 @@ const generatePalette = () => {
         color.classList.add("color");
         color.innerHTML = `<div class="rect-box" style="background: ${randomHex}"></div>
                            <span class="hex-value">${randomHex}</span>`
+
+        // adding click event to current li element to copy color
+
+        color.addEventListener("click", () => copyColor(color, randomHex))
         container.appendChild(color)
 
     }
 }
 generatePalette();
+
+// copy color function chunk
+const copyColor = (elem, hexVal) => {
+    const colorElement = elem.querySelector(".hex-value");
+    navigator.clipboard.writeText(hexVal).then(() => {
+        colorElement.innerText = "Copied";
+        setTimeout(() => {
+            colorElement.innerText = hexVal;
+        }, 1000);
+    })
+}
 refreshBtn.addEventListener("click", generatePalette);

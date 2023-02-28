@@ -50,6 +50,7 @@ body {
     font-weight: 500;
     margin: 12px 0 8px;
     color: #444;
+    text-transform: uppercase;
 }
 .refresh-btn {
     position: fixed;
