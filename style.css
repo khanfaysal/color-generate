@@ -128,10 +128,10 @@ Variables
   /*  global classes */
   
   /* section */
-  .section {
+  /* .section {
     padding: 5rem 0;
   }
-  
+   */
   .section-center {
     width: 90vw;
     margin: 0 auto;
@@ -154,9 +154,19 @@ Variables
   ===============
   */
   nav {
+    z-index: 1;
     background: var(--clr-white);
     box-shadow: var(--light-shadow);
   }
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background: var(--clr-white);
+  box-shadow: var(--light-shadow); */
+}
   .nav-header {
     display: flex;
     align-items: center;
@@ -219,6 +229,7 @@ Variables
   */
 .container {
     position: relative;
+    z-index: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -278,6 +289,18 @@ Variables
   color part end
   ===============
   */
+
+  footer {
+    background: var(--clr-grey-1);
+    padding: 2rem 1rem;
+  }
+  footer p {
+    color: var(--clr-white);
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0;
+  }
 
 /* responsive */
 

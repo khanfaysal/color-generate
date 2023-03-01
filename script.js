@@ -1,17 +1,27 @@
+// fixed navbar
+const navbar = document.getElementById("nav");
+window.addEventListener('scroll', function () {
+    const scrollHeight = window.scrollY;
+    const navHeight = navbar.getBoundingClientRect().height;
+
+    if (scrollHeight > navHeight) {
+        navbar.classList.add('fixed-nav');
+    } else {
+        navbar.classList.remove('fixed-nav');
+    }
+    console.log(window.scrollY);
+})
 // navbar js start
 const navToggle = document.querySelector('.nav-toggle');
 const links = document.querySelector('.links');
 
+
 navToggle.addEventListener('click', function () {
-    // console.log(links.classList.contains('random'));
-    // if (links.classList.contains('show-links')) {
-    //     links.classList.remove('show-links')
-    // } else {
-    //     links.classList.add('show-links')
-    // }
     links.classList.toggle('show-links')
 })
 // navbar js end
+
+
 
 // color js start
 const container = document.querySelector(".container")
